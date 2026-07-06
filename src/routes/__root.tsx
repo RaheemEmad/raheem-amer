@@ -77,14 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "RaheemOS — Raheem Amer | Google Cloud Engineer" },
+      {
+        name: "description",
+        content:
+          "SSH into RaheemOS: an interactive terminal portfolio for Raheem Amer — Google Cloud Engineer, DevOps, and full-stack developer.",
+      },
+      { name: "author", content: "Raheem Amer" },
+      { name: "theme-color", content: "#1a1b26" },
+      { property: "og:title", content: "RaheemOS — Raheem Amer" },
+      {
+        property: "og:description",
+        content:
+          "An interactive terminal portfolio. Type `help` to explore.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -92,6 +100,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Raheem Amer",
+          jobTitle: "Google Cloud Technical Support Engineer",
+          url: "/",
+          sameAs: [
+            "https://github.com/RaheemEmad",
+            "https://github.com/RaheemAmer",
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -102,11 +136,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="bg-background text-foreground">
         {children}
         <Scripts />
       </body>
