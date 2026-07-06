@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Raheem Amer" },
       { name: "theme-color", content: "#1a1b26" },
-      { property: "og:title", content: "RaheemOS — Raheem Amer" },
+      { property: "og:title", content: "RaheemOS — Raheem Amer | Google Cloud Engineer" },
       {
         property: "og:description",
         content:
@@ -93,6 +93,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "RaheemOS — Raheem Amer | Google Cloud Engineer" },
+      { name: "description", content: "SSH into RaheemOS: an interactive terminal portfolio for Raheem Amer — Google Cloud Engineer, DevOps, and full-stack developer." },
+      { property: "og:description", content: "SSH into RaheemOS: an interactive terminal portfolio for Raheem Amer — Google Cloud Engineer, DevOps, and full-stack developer." },
+      { name: "twitter:description", content: "SSH into RaheemOS: an interactive terminal portfolio for Raheem Amer — Google Cloud Engineer, DevOps, and full-stack developer." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/6672a8c4-06d7-428d-b87d-40cb9fd85d07" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/6672a8c4-06d7-428d-b87d-40cb9fd85d07" },
     ],
     links: [
       {
