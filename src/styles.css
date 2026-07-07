@@ -119,11 +119,17 @@
     border-color: var(--color-border);
   }
 
+  html,
+  body {
+    height: 100%;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-mono);
     font-feature-settings: "calt", "liga";
+    overflow: hidden;
   }
 
   html {

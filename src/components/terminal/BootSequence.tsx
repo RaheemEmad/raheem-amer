@@ -65,7 +65,7 @@ export function BootSequence({ onDone }: { onDone: () => void }) {
     <div
       role="status"
       aria-live="polite"
-      className="min-h-screen w-full flex items-center justify-center px-4"
+      className="h-dvh w-full flex items-center justify-center px-4 overflow-hidden"
       style={{ background: "var(--tn-bg)", color: "var(--tn-text)" }}
     >
       <div className="w-full max-w-2xl font-mono text-sm sm:text-base">

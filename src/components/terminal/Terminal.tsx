@@ -268,7 +268,7 @@ export function Terminal() {
 
   return (
     <div
-      className="min-h-screen w-full flex flex-col"
+      className="h-dvh w-full flex flex-col overflow-hidden"
       style={{ background: "var(--tn-bg)", color: "var(--tn-text)" }}
       onMouseDown={(e) => {
         // Don't hijack link/text-selection clicks
@@ -297,7 +297,7 @@ export function Terminal() {
       {/* Scroll area */}
       <div
         ref={scrollRef}
-        className="flex-1 overflow-y-auto px-3 sm:px-6 py-4 text-sm sm:text-[15px] leading-relaxed"
+        className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-3 sm:px-6 py-4 text-sm sm:text-[15px] leading-relaxed"
       >
         <div
           aria-live="polite"
